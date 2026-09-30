@@ -1,0 +1,28 @@
+<section class="block-config">
+    <h2>Capacidade por horário</h2>
+    <p>Quantos atendimentos podem acontecer ao mesmo tempo. Use 0 para não atender.</p>
+    {{#if salvo}}<p class="msg-ok">Configuração salva.</p>{{/if}}
+
+    <form action="/ajustaPetAgenda" method="post">
+        <div class="tabela-scroll field">
+            <table class="calendario">
+                <thead>
+                    <tr><th></th>{{#each dias}}<th>{{this}}</th>{{/each}}</tr>
+                </thead>
+                <tbody>
+                    {{#each linhas}}
+                    <tr>
+                        <th>{{hora}}</th>
+                        {{#each celulas}}
+                        <td><input type="number" name="{{nome}}" value="{{valor}}" min="0" max="20" /></td>
+                        {{/each}}
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <div class="field">
+            <button type="submit" class="btn">Salvar configuração</button>
+        </div>
+    </form>
+</section>

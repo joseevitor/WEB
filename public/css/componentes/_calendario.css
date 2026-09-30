@@ -1,0 +1,58 @@
+.semana {
+    justify-content: flex-start;
+    gap: 24px;
+    margin-bottom: 24px;
+
+    & a {
+        color: #157ecf;
+        font-weight: 600;
+    }
+}
+
+.calendario {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+
+    & th, & td {
+        padding: 12px 8px;
+        border-bottom: 1px solid var(--cor-secundaria);
+    }
+
+    & th {
+        font-size: var(--fonte-t3);
+        color: #5d9df1;
+        font-weight: 600;
+
+        & small {
+            display: block;
+            font-weight: 400;
+            color: var(--cor-tercearia);
+        }
+    }
+
+    & .slot {
+        display: block;
+        padding: 8px;
+        border-radius: 8px;
+        background-color: var(--cor-secundaria);
+        color: #fff;
+        font-size: var(--fonte-t3);
+        font-weight: bold;
+
+        &:hover {
+            background-color: var(--cor-primaria);
+            color: #fff;
+        }
+    }
+
+    & input {
+        width: 64px;
+        padding: 8px;
+        border: 1px solid var(--cor-secundaria);
+        border-radius: 8px;
+        background-color: #fff;
+        color: #444444;
+        text-align: center;
+    }
+}

@@ -1,0 +1,10 @@
+<section class="block-resultado">
+    {{#if ok}}
+        <h2>Agendamento confirmado</h2>
+        <p class="msg-ok">{{nome}}, seu banho e tosa está marcado para {{dataBR}} às {{hora}}.</p>
+    {{else}}
+        <h2>Não foi possível agendar</h2>
+        <p class="msg-erro">{{erro}}</p>
+    {{/if}}
+    <a href="/" class="voltar">Voltar ao calendário</a>
+</section>

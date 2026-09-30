@@ -1,0 +1,29 @@
+<section class="block-calendario">
+    <h2>Escolha um horário</h2>
+
+    <div class="semana flex">
+        {{#if temAnterior}}<a href="/?semana={{anterior}}">Semana anterior</a>{{/if}}
+        <a href="/?semana={{proxima}}">Próxima semana</a>
+    </div>
+
+    <div class="tabela-scroll">
+        <table class="calendario">
+            <thead>
+                <tr>
+                    <th></th>
+                    {{#each dias}}<th>{{nome}}<small>{{dataBR}}</small></th>{{/each}}
+                </tr>
+            </thead>
+            <tbody>
+                {{#each linhas}}
+                <tr>
+                    <th>{{hora}}</th>
+                    {{#each celulas}}
+                    <td>{{#if livre}}<a class="slot" href="/agendar?data={{data}}&hora={{hora}}">{{rotulo}}</a>{{/if}}</td>
+                    {{/each}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>

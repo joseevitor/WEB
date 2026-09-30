@@ -1,0 +1,20 @@
+.lista {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+
+    & th {
+        font-size: var(--fonte-t3);
+        color: #5d9df1;
+        font-weight: 600;
+    }
+
+    & th, & td {
+        padding: 12px 8px;
+        border-bottom: 1px solid var(--cor-secundaria);
+    }
+
+    & tr:last-of-type td {
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,20 @@
+<section class="block-lista">
+    <h2>Agendamentos</h2>
+
+    {{#if rows.length}}
+    <div class="tabela-scroll">
+        <table class="lista">
+            <thead>
+                <tr><th>Data</th><th>Horário</th><th>Cliente</th><th>CPF</th></tr>
+            </thead>
+            <tbody>
+                {{#each rows}}
+                <tr><td>{{dataBR}}</td><td>{{hora}}</td><td>{{nome}}</td><td>{{cpf}}</td></tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    {{else}}
+    <p>Nenhum agendamento ainda.</p>
+    {{/if}}
+</section>

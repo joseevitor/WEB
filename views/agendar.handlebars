@@ -1,0 +1,22 @@
+<section class="block-agendar">
+    <h2>Confirmar agendamento</h2>
+    <p class="resumo">{{diaNome}}, {{dataBR}} às {{hora}}</p>
+    {{#if erro}}<p class="msg-erro">{{erro}}</p>{{/if}}
+
+    <form action="/agendar" method="post">
+        <input type="hidden" name="data" value="{{data}}">
+        <input type="hidden" name="hora" value="{{hora}}">
+
+        <div class="field">
+            <label for="nome">Nome:</label><br>
+            <input type="text" name="nome" id="nome" class="field-input" value="{{nome}}" required />
+        </div>
+        <div class="field">
+            <label for="cpf">CPF:</label><br>
+            <input type="text" name="cpf" id="cpf" class="field-input" value="{{cpf}}" placeholder="000.000.000-00" maxlength="14" required />
+        </div>
+        <div class="field">
+            <button type="submit" class="btn">Confirmar agendamento</button>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,53 @@
+.block-calendario,
+.block-agendar,
+.block-lista,
+.block-config,
+.block-resultado {
+    background-color: #f5f5f5;
+    color: black;
+    padding: 30px;
+    border-radius: 8px;
+
+    & h2 {
+        font-size: var(--fonte-t1);
+        padding: 0;
+        margin-block: 0 24px;
+    }
+
+    & p {
+        margin-block: 0 24px;
+    }
+
+    & .resumo {
+        color: #5d9df1;
+        font-weight: 600;
+    }
+
+    & .msg-erro {
+        color: #c0392b;
+        font-weight: 700;
+    }
+
+    & .msg-ok {
+        color: #1e7f4f;
+        font-weight: 700;
+    }
+
+    & .voltar {
+        color: #157ecf;
+        font-weight: 600;
+    }
+
+    @media (max-width: 950px) {
+        width: 100%;
+    }
+}
+
+.block-agendar .field-input {
+    width: 355px;
+    max-width: 100%;
+}
+
+.tabela-scroll {
+    overflow-x: auto;
+}
